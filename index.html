@@ -4,27 +4,7 @@
     <meta charset=  "UTF - 8">
     <title>Calculator</title>
 </head>
-<script>
-         //function that display value
-         const show = (val) =>
-         {
-             document.getElementById("result").value+=val
-         }
-           
-         //function that evaluates the digit and return result
-         function solve()
-         {
-             let x = document.getElementById("result").value
-             let y = eval(x)
-             document.getElementById("result").value = y
-         }
-           
-         //function that clear the display
-         function clr()
-         {
-             document.getElementById("result").value = ""
-         }
-</script>
+
 <style>
 body{
     background: honeydew;
@@ -39,7 +19,7 @@ input[type=text]{
     width: 100%;
     padding: 10px;
     font-size: 25px;
-    font-family: Arial, sans-serif;
+    font-family: Arial, serif;
 }
 
 </style>
@@ -48,7 +28,7 @@ input[type=text]{
 <div class="cal">
 
 
-<input type="text" id="display">
+<input type="text" id="result">
 <br><br>
 
 
@@ -79,6 +59,7 @@ input[type=text]{
 
 <br><br>
 
+<input id = "c" type="button" value="c" onclick="clr()">
 <input id = "0" type="button" value="0" onclick="show('0')">
 <input id = "." type="button" value="." onclick="show('.')">
 <input id = "=" type="button" value="=" onclick="solve('=') ">
@@ -86,4 +67,25 @@ input[type=text]{
 </div>
 
 </body>
+<script>
+    //function that display value
+    const show = (val) =>
+    {
+        document.getElementById("result").value+=val
+    }
+      
+    //function that evaluates the digit and return result
+    function solve()
+    {
+        let x = document.getElementById("result").value
+        let y = eval(x)
+        document.getElementById("result").value = y
+    }
+      
+    //function that clear the display
+    function clr()
+    {
+        document.getElementById("result").value = ""
+    }
+</script>
 </html>
