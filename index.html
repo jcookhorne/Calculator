@@ -4,6 +4,27 @@
     <meta charset=  "UTF - 8">
     <title>Calculator</title>
 </head>
+<script>
+         //function that display value
+         const show = (val) =>
+         {
+             document.getElementById("result").value+=val
+         }
+           
+         //function that evaluates the digit and return result
+         function solve()
+         {
+             let x = document.getElementById("result").value
+             let y = eval(x)
+             document.getElementById("result").value = y
+         }
+           
+         //function that clear the display
+         function clr()
+         {
+             document.getElementById("result").value = ""
+         }
+</script>
 <style>
 body{
     background: honeydew;
@@ -31,59 +52,38 @@ input[type=text]{
 <br><br>
 
 
-<input id = "^2" type="button" value="^2" onclick="display.value+='^2'">
-<input id = "%" type="button" value="%" onclick="display.value+='%'">
-<input id = "/" type="button" value="/" onclick="display.value+='/'">
+<input id = "^2" type="button" value="^2" onclick="show('^2')"/>
+<input id = "%" type="button" value="%" onclick="show('%')"/>
+<input id = "/" type="button" value="/" onclick="show('/')"/>
 
 <br><br>
 
-<input id = "7" type="button" value="7" onclick="display.value+='7'">
-<input id = "8" type="button" value="8" onclick="display.value+='8'">
-<input id = "9" type="button" value="9" onclick="display.value+='9'">
-<input id = "*" type="button" value="*" onclick="display.value+='*'">
+<input id = "7" type="button" value="7" onclick="show('7')"/>
+<input id = "8" type="button" value="8" onclick="show('8')"/>
+<input id = "9" type="button" value="9" onclick="show('9')"/>
+<input id = "*" type="button" value="*" onclick="show('*')"/>
 
 <br><br>
 
-<input id = "4" type="button" value="4" onclick="display.value+='4'">
-<input id = "5" type="button" value="5" onclick="display.value+='5'">
-<input id = "6" type="button" value="6" onclick="display.value+='6'">
-<input id = "-" type="button" value="-" onclick="display.value+='-'">
+<input id = "4" type="button" value="4" onclick="show('4')"/>
+<input id = "5" type="button" value="5" onclick="show('5')"/>
+<input id = "6" type="button" value="6" onclick="show('6')"/>
+<input id = "-" type="button" value="-" onclick="show('-')"/>
 
 <br><br>
 
-<input id = "1" type="button" value="1" onclick="display.value+='1'">
-<input id = "2" type="button" value="2" onclick="display.value+='2'">
-<input id = "3" type="button" value="3" onclick="display.value+='3'">
-<input id = "+" type="button" value="+" onclick="display.value+='+'">
+<input id = "1" type="button" value="1" onclick="show('1')"/>
+<input id = "2" type="button" value="2" onclick="show('2')"/>
+<input id = "3" type="button" value="3" onclick="show('3')"/>
+<input id = "+" type="button" value="+" onclick="show('+')"/>
 
 <br><br>
 
 <input id = "0" type="button" value="0" onclick="display.value+='0'">
 <input id = "." type="button" value="." onclick="display.value+= '.'">
-<input id = "=" type="button" value="=" onclick="display.value+= eval(display.value) ='0'">
+<input id = "=" type="button" value="=" onclick="display.value+= eval (display.value) ">
 
 </div>
-<!--input id = "^2" type="button" value="^2" onclick="display.value+='^2'"-->
 
-<!--input type="number" id="first"-->
-<!--input type="number" id = "second"-->
-<!--input id="numInput" type = "text" /--> 
 </body>
-<script>
-    function input(i) {
-        var numInput = document.getElementById("numInput");
-        numInput.value = numInput.value + i.value;  
-        }
-    const Calculator = (num1, num2) =>{
-        num1 = document.getElementById('first');
-        num2 = document.getElementById('second');
-        
-        
-    
-    }
-    const addition = () =>{
-
-    }
-
-</script>
 </html>
